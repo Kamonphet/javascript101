@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript เบื้องต้น</title>
+</head>
+<body>
+    <H1>Hello World</H1>
+    <button onclick='logout()' >ออกจากระบบ</button>
+
+    <!-- การเขียนผ่าน javascript -->
+    <script type="text/javascript">
+        document.write("Phet");
+        //แสดงข้อความ ตัวเลข ตัวแปร หรือแท็ก html ในหน้าเว็บ
+        alert("Congratulation");
+        //สำหรับแจ้งเตือนผู้ใช้ในหน้าเว็บ แบบ popup
+        console.log("Phet");
+        console.error("เจอไวรัส");
+        console.warn("เจอข้อผิดพลาด");
+        //สำหรับ debug ค่าต่าง ๆ แต่จะไม่แสดงผลในเว็บ แต่จะแสดงในแท็บ console
+
+        //ตัวแปร่ - dynamic type
+        //local variable ตัวแปรที่อยู่ในฟังก์ชัน
+        //global variable ตัวแปรที่อยู่นอกฟังก์ชัน
+        var money; //undifined
+        var age = 10;
+        var a,b,c,d
+        var x=10, y=250, z=30
+
+        let money;
+        let tall = 170;
+
+        //ค่าคงที่
+        const kilogram = 100;
+
+        //ชนิดข้อมูล
+        // typeof เช็คชนิดข้อมูล
+        //null ไม่มีการกำหนดค่าแต่มีค่าอยู๋
+        //undifine ค่าเริ่มต้นของโปรแกรม
+        true //boolean
+        20 , 30.15 //number (integer,float)
+        "honey" //string
+        let object = {firstname:"phet",Lastname:"tyuip", age:20} //object
+        ["som","bananba","tanfmo"] //array
+
+        
+        //แปลง string เป็น number
+        let x=parseInt("102");
+        let x=parseInt("102.45");
+        let x= +"102.45";
+
+        let z = 59+"";
+        let z = 59.90.toString();
+
+        //array
+        let array1 = new Array();
+        let array2 = Array(1,'fg',45.55);
+        let array3 = [1,"rgrg",45.441];
+
+        console.log(array3[0]);
+
+        //foreach
+        let animal = ['ling','mangmum','pra'];
+        animal.forEach(mydata);
+
+        function mydata(item){
+            console.log(item);
+        }
+
+        //เรียงลำดับ array.sort()
+        //เรียนลำดับกลับด้าน array.reverse()
+        //หาจำนวนสมาชิก array.length()
+        //สมาชิกตัวแรก array[0]
+        //สมาชิกตัวสุดท้าย array[array.lenghth-1]
+        //เพิ่มสมาชิก array.push()
+        //แปลง array เป็น string  array.toString()
+        //นำค่าใน array มารวมกัน array.join('*')
+        //เอาค่าแรกออก array.pop()
+        //รวมarray array.concat(array1,array2)
+
+
+
+        //ตัวดำเนินการ
+        // + - * / %
+        //ลำดับการดำเนินการ ()  ++,--  *,/,%  +,-  <,<=,>,>=  ==,!=  &&  ||  =,+=,-=,*=,/=,%= จากซ้ายไปขวา 
+
+
+        10+10;
+        10-10;
+        10*10;
+        10/10;
+        10%10;
+
+        //ตัวดำเนินการเปรียบเทียบ ได้ผลลัพธ์ boolean
+        // == != > < >= <=
+        10==10;
+        10!=10;
+        10>10;
+        10<10;
+        10>=10;
+        10<=10;
+
+        //ตัวดำเนินการทางคณิตศาสตร์
+        //&& || !
+        let a =50;
+        let b =10;
+        
+        console.log(a >=70 && b<=10);
+        console.log(a >=70 || b<=10);
+        console.log(!a);
+
+        //ตัวดำเนินการเพิ่มค่า ลดค่า
+        // ++a --b เพิ่มค่าหรือลดค่าก่อน 1 ค่า แล้วนำไปใช้
+        // a++ b-- นำค่าปัจจุบันไปใช้ก่อนแล้วค่าเพิ่มค่า ลดค่า 1 ค่า
+
+        //compound Assignment เขียนแบบลดรูป
+        //x+=y = x= x+y
+        //x-=y = x= x-y
+        //x*=y = x= x*y
+        //x/=y = x= x/y
+        //x%=y = x= x%y
+
+        //เงื่อนไข
+        let age = 15;
+        if(age==15){
+            console.log('เด็กหว่ะ');
+        }else if(age<15){
+            console.log("รีบ ๆ โต!!!");
+        }else{
+            console.log('โตแล้วนี่');
+        }
+
+        let age = (age==20)?console.log('dek'):console.log('to');
+
+        //nested if
+        if('เงื่อนไข'){
+            if('เงื่อนไข'){
+                'คำสั่งเมื่อจริง'
+            }
+        }
+
+        //switch..case
+        switch('สิ่งที่ตรวจสอบ'){
+            case 15:console.log('dsf');
+                break;
+            case 20:console.log('djksf');
+                break;
+            case 'N':console.log('adasdk')
+                break;
+        }
+
+        //loop
+        //while loop ใช้ตอนไม่รู้จำนวนรอบที่ชัดเจน
+        while('เงื่อนไขเป็นจริง'){
+            'คำสั่งเมื่อเป็นจริง'
+            'ตัวนับเพิ่ม/ลดจำนวน' // x++ , -++
+        }
+
+        //for loop ใช้เมื่อรู้จำนวนรอบชัดเจน
+        for(let i =1;i<10;i++){
+            'คำสั่งเมื่อเป็นจริง'
+        }
+
+        //array forloop
+        let color = ['red',['green'],['blue']];
+        let count = color.length;
+
+        for (let u= 0; u< count; u++){
+            console.log(color[u])
+        }
+
+        //do while อยากให้ลองทำก่อน 1 รอบบ แล้วให้ทำซ้ำเรื่อย ๆ 
+        do{
+            'คำสั่งต่าง ๆ เมื่อเงื่อนไขเป็นจริง'
+        }while('เงื่อนไข')
+
+
+        //brake จะหลุดจากการทำงานในลูปทันที
+        //continue หยุดการทำงานแล้วย้ินกลับไปเริ่มต้นดารทำงายที่ต้นลูปใหม่
+
+        //null ไม่มีค่าอะไรเลย ไม่ว่าง ไม่0
+        let o =null;
+        //undifine ประกาศค่าเฉย ๆ ยังไม่ได้ให้ค่า
+        let i;
+        //NaN ตัวแปรที่ไม่ใช่ตัวเลขไปคำนวณทางคณิตศาสตร์
+        let q =10;
+        let k = 's';
+        alert(q-k);
+
+
+        //function
+        function test(parameter){
+            'ค่าสั่ง'
+        }
+
+        //เรียกใช้
+        test(argument);
+
+        //return ส่งค่าออกมาจากฟังก์ชัน
+
+        //object
+        let obj = {
+            people:'student',
+            phone:'apple',
+            getUser:function(){
+                return this.people+" "+this.phone;
+            }
+        };
+        //this ใช้เรียก propotyname ใน object
+
+        // confirm("ข้อความ") ในสอบถามการยืนยันจากผู้ใช้
+        //จากหน้าhtml
+        function logout(){
+            let result =confirm("จะออกหรือไม่")
+            if (result){
+                console.log('true')
+            }else{
+                console.log('false')
+            }
+        }
+
+        //dom document
+        //element.innerHTML เป็นเนื้อหา HTML
+        //element.innerText เปลี่ยนเนื้อหาText
+        //element.style.properties = value เปลี่ยนStyle element
+        //ดำเนินการผ่าน medthod element.setAttribure(attribute,value)
+        
+        //การเข้าถึง element ผ่าน id, Tag, Class
+        document.getElementById()
+        document.getElementsByTagName()
+        document.getElementsByClassName()
+
+        //DOM node (element)
+        document.createElement(Element) //สร้าง element ใหม่
+        document.removeChild(Element) //ลบ node ลูก
+        document.appendChild(Element) //นำ element ไปต่อใน node แม่
+        document.replaceChild(neww ,old) //แทนที่ element
+
+    </script>
+
+</body>
+</html>
