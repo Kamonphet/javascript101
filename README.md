@@ -6,3 +6,4 @@
 
 
 -โหลดไฟล์และเปิด live server (extension for VScode)
+-กด F12 แล้วเปิด console ประกอบการแสดงผลบนหน้าจอบราวเซอร์
